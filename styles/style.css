@@ -91,7 +91,6 @@ ol {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 54px;
   border: none;
 }
 
@@ -246,8 +245,7 @@ ol {
 .content__list-container {
   position: relative;
   height: 298px;
-  overflow-x: hidden;
-  overflow-y: auto;
+  overflow: auto;
 }
 
 .content__list {
@@ -334,12 +332,17 @@ ol {
   text-align: left;
   text-decoration-skip-ink: none;
   text-underline-position: from-font;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  overflow: hidden; 
 }
 
 .content__video-card-thumbnail {
   width: 194px;
   height: 103px;
-  object-fit: fill;
+  object-fit: cover;
   object-position: center;
 }
 
